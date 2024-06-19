@@ -35,7 +35,6 @@ export default function SignUp() {
       setError(err.message || 'An error occurred!')
     }
     setLoading(false)
-    console.log(data)
   }
 
   return (

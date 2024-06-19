@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema(
       default: 'https://gravatar.com/avatar',
     },
   },
-  { timestamp: true }
+  { timestamps: true }
 )
 
 const User = mongoose.model('User', userSchema)

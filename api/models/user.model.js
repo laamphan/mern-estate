@@ -16,6 +16,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    avatar: {
+      type: String,
+      default: 'https://gravatar.com/avatar',
+    },
   },
   { timestamp: true }
 )

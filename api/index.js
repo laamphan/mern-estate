@@ -31,7 +31,18 @@ app.use('/api/user', userRouter)
 app.use('/api/auth', authRouter)
 app.use('/api/listing', listingRouter)
 
-app.use(express.static(path.join(__dirname, '/client/build')))
+app.use(
+  express.static(
+    path.join(__dirname, '/client/dist')
+    // ,{
+    //   setHeaders: function (res, path) {
+    //     if (path.endsWith('.mjs')) {
+    //       res.setHeader('Content-Type', 'application/javascript')
+    //     }
+    //   },
+    // }
+  )
+)
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'))
